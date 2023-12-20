@@ -1,24 +1,21 @@
 import React, { useRef, useState } from 'react'
-import Section1 from '../Components/Section1'
-import Section2 from '../Components/Section2'
+import NavBar from './NavBar'
+import IncludedSection from './IncludedSection'
+import Footer from './Footer'
 
-import Section4 from '../Components/Section4'
 
-
-import { Link } from 'react-router-dom'
-
-const LandingPage = ({change,change2,}) => {
+const LandingPage = ({}) => {
 
    
   return (
     <div>
 
-<Section1 />
-<Section2 />
-<Section4 change={change} change2={change2}/>
 
 
 
+<NavBar />
+<IncludedSection />
+<Footer />
 {/* <Link to='./Collections'>Collections</Link> */}
     </div>
   )

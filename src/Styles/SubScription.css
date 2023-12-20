@@ -1,0 +1,170 @@
+.flexSubScribe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px ;
+    background-color: white;
+}
+.flexSubScribe a{
+    color: #272c34;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.flexSubScribe img{
+    width: 60px;
+}
+.subGeneralWrap{
+    background-color: #f7f7f7;
+
+}
+.subWrap{
+    text-align: center;
+}
+.subWrap h1{
+    font-size: 36px;
+    margin-bottom: 0;
+
+}
+.subWrap p{
+    margin-top: 6px;
+    color: #636e85;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  @media (max-width: 374px) {
+    .include h1 {
+      font-size: 24px;
+    }
+  }
+
+  .baseWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 20px; */
+  }
+  .black{
+    color: black;
+    padding-bottom: 8px ;
+    border-bottom:4px  solid black;
+    padding-left:  12px;
+    padding-right:  12px;
+
+    cursor: pointer;
+  }
+  .grey{
+    color: #636e85;
+    padding-bottom: 8px ;
+    border-bottom: 1px solid #636e85;
+    padding-left:  12px;
+    padding-right:  12px;
+    cursor: pointer;
+
+  }
+  .flexSubScriptions h2{
+    margin-top: 0;
+  }
+  .flexSubScriptions h4{
+    margin-bottom: 0;
+    font-size: 20px ;
+  }
+  .subGeneralWrap small{
+    color: black;
+  }
+  .subGeneralWrap span{
+    color: #29a869;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size:15px ;
+
+    
+  }
+  .flexSubScriptions p{
+    color: #636e85;
+    word-spacing: 4px;
+    line-height: 20px ;
+  }
+  
+  .noAds{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .whiteBackground{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 60px 40px ;
+    /* width: 100%; */
+    box-shadow: 3px 2px 3px rgb(216, 214, 210);
+
+    /* max-width: 20%; */
+    /* width: 30%; */
+  }
+  .select1{
+    border: 2px solid #272c35 ;
+    background-color: white;
+    color: #272c35;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px ;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .select2{
+    border: 2px solid #272c35 ;
+    background-color:  #272c35;
+    color:white ;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px ;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .flexSubScriptions{
+    display: grid ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 2% 6%   ;
+    align-items: center;
+  }
+  @media (max-width:1000px) {
+    .flexSubScriptions{
+        grid-template-columns: 1fr 1fr ;
+        justify-content: center;
+     margin: 0 auto;
+    }
+  }
+  @media (max-width:600px){
+   .flexSubScriptions{
+    grid-template-columns: 1fr ;
+    gap: 10px ;
+   }
+  }
+  .noAds button{
+    width: fit-content;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 0px 20px ;
+    border: none;
+    color: white;
+    background-color: #29a869;
+    font-weight: 900;
+    font-size: 10px;
+
+  }
+  .border{
+    border-top:4px solid  #29a869;
+  }
+  .border button:nth-child(2){
+background-color: black;
+  }
+
+  /* .flexSubScriptions img{
+    width: 200px ;
+  } */

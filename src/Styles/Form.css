@@ -1,0 +1,97 @@
+form {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.formWrap {
+  background-color: #fff;
+  padding: 40px 39px;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 0 auto;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  transition: 0.3s ease;
+  /* top: 0;
+    right: 10;
+    left: 10;*/
+}
+.displayNone {
+  display: none;
+  transition: 0.3s ease-in;
+}
+
+
+#removeIcon:hover {
+  /* color: red; */
+  transform: rotate(300deg);
+}
+
+#removeIcon {
+  width: fit-content;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s ;
+  font-weight: bolder;
+}
+.flexRemoveForm{
+    display: flex;
+    justify-content: end;
+}
+.formWrap h2 {
+  color: #272c34;
+  font-size: 26px;
+  font-weight: bold;
+}
+.formWrap p {
+  color: #636e85;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  word-spacing: 2px;
+  line-height: 23px;
+}
+.formWrap a {
+  color: #3c88eb;
+  font-size: 14px;
+  text-decoration: none;
+}
+.formWrap label {
+  color: #636e85;
+  font-size: 13px;
+  font-weight: bold;
+}
+.formWrap input,select {
+  border: 1px solid gray;
+  height: 45px;
+  margin-top: 13px;
+  width: 93%;
+  border-radius: 5px;
+}
+
+#login {
+  width: 95%;
+  height: 47px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #272c35;
+  opacity: 0.5;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.showPass {
+  margin-top: 10px;
+}
+.hidePass {
+  margin-top: 10px;
+}
+.flexAccount img{
+  width: 60px;
+
+}

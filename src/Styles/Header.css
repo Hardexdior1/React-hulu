@@ -1,0 +1,209 @@
+
+.heroWrap{
+    height: 100dvh;
+    background-image: url(../images/hulu-hero-section.jfif);
+    /* background-size: auto; */
+   background-size:contain;
+   /* background-repeat: no-repeat; */
+    /* background-size: initial; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+/* .heroWrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+  } */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+.logo{
+    width: 60px;
+}
+.login-button{
+    color: #a8afbd;
+    background-color: transparent;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.menu{
+    display: grid;
+    gap: 2px;
+    background-color: #323843;
+    padding: 12px 15px;
+    border-radius: 5px;
+    
+}
+.menu div{
+    width: 12px;
+    height: 2px;
+    background-color: aliceblue;
+}
+.getWrap{
+   display: none;
+}
+.getWrapShow{
+    background-color: #323843;
+    /* display: inline-block; */
+    position: absolute;
+    padding: 10px 10px ;
+    width:50%;
+    max-width: 40%;
+    border-radius: 5px;
+    right: 15px;
+    margin-top: 60px;
+    top: 0;
+}
+.getTheHuluAppWrap{
+display: grid;
+grid-template-columns: 1fr;
+gap: 10px;
+}
+.gta,.log{
+    background-color: transparent;
+    color: #a8afbd;
+    border: none;
+    font-weight: 900;
+}
+.gat{
+    width: 100%;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+   padding: 12px 0px ;
+   border: none;
+}
+@media (min-width:1024px) {
+    .menu,.getWrap{
+        display: none;
+    }
+    
+}
+@media (max-width:1023px) {
+    .login-button{
+        display: none;
+    }
+    .heroWrap{
+        /* height: 50dvh; */
+    }
+}
+
+.none{
+    display:none;
+}
+
+/* #1ce783 */
+
+.disneyBundleWrap{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    gap: 10%;
+    /* z-index: 30px; */
+
+}
+.img{
+   width: 300px;
+   /* height: 50px ; */
+}
+/* .disneyBundleWrap h5{
+    color: #1ce783;
+} */
+.disneyBundleWrap h4{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.disneyBundleWrap h5{
+    color: #1ce783;
+}
+.disneyBundleWrap button{
+    background-color: #1ce783;
+    color: black;
+    border: none;
+    padding: 14px 100px;
+    font-size: 14px ;
+    
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.disneyBundleWrap button:hover{
+   opacity: 0.7;
+}
+.gap{
+    display: grid;
+    gap: 10%;
+}
+
+@media (max-width:750px) {
+    .disneyBundleWrap{
+        padding-left: 10px  ;
+        padding-right: 10px;
+    }
+    .img{
+        width: 100%;
+        height: fit-content;
+    }
+    
+       .disneyBundleWrap button{
+        width: 100%;
+        padding: 12px 0px ;
+       }
+       .heroWrap{
+            background-size: cover;
+       }
+    
+}
+@media (max-width:661px) {
+   
+    .disneyBundleWrap h5{
+        font-size: 12px;
+    }
+    .disneyBundleWrap h4{
+        font-size: 15px;
+       }
+}
+
+
+.termsWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.termsWrap small {
+    color: #eee9e9;
+    font-size: 15px;
+}
+.termsWrap a{
+    color: white;
+}
+.view{
+    text-decoration:none ;
+}

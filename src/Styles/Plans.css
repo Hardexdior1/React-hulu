@@ -1,0 +1,232 @@
+
+.SelectPlanWrap {
+    background-color: #000000;
+}
+.SelectPlanWrap h1{
+    color: #fff;
+    font-size: 3rem;
+}
+.SelectPlanWrap p{
+    color: #fff;
+    line-height: 15px;
+}
+
+.SelectPlanWrap h6{
+    color:#1ce783;
+
+}
+.SelectPlanWrap h5{
+    color: #fff;
+}
+.bestPlansWrap{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.mostPoPuLarWrap{
+    line-height: 10px;
+    padding-bottom: 30px;
+}
+ .mostPoPuLarWrap1 button:nth-child(1){
+    color:#1d181d;
+    background-color: #1ce783;
+    font-size: 8px;
+    padding: 10px 35px ;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: n-resize;
+    border: none;
+}
+.mostPoPuLarWrap1 h3{
+    color: rgb(102, 105, 103);
+    font-size: 12px;
+    font-family: sans-serif ;
+   
+}
+.mostPoPuLarWrap1 h4{
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+
+.mostPoPuLarWrap1{
+    display: flex;
+    gap: 20px;
+    align-items: last baseline;
+                 margin-bottom: 14px;
+
+}
+
+
+
+.pricePerMonth{
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 14px;
+    width: 100%;
+    color: #040405;
+    cursor: pointer;
+    border: none;
+    padding: 10px ;
+}
+
+
+
+.mostPoPuLarWrap2 button:nth-child(1){
+   color:#1d181d;
+   background-color: #1ce783;
+   font-size: 8px;
+   padding: 10px 35px ;
+   border-radius: 20px;
+   font-weight: bold;
+   cursor: n-resize;
+   border: none;
+}
+.mostPoPuLarWrap2 h5{
+   color: #fff;
+   font-size: 16px;
+   font-family: sans-serif ;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   font-weight: bold;
+  
+}
+.mostPoPuLarWrap2 h2{
+   color: #fff;
+   margin-bottom: 5px;
+   font-size: 17px;
+   margin-bottom: 0;
+}
+
+.BasePlanAndMostPopularFlexDiv{
+    display: flex;
+    /* align-items: last baseline center; */
+    /* justify-content: center; */
+    gap: 5%;
+    justify-content: space-around;
+}
+
+
+.mostPoPuLarWrap2{
+    /* display: none; */
+    display: flex;
+    transition: 0.3s;
+    margin-top: 14px ;
+    margin-bottom: 14px;
+    gap: 5px;
+    padding: 10px;
+    
+}
+@media(max-width:526px){
+    .mostPoPuLarWrap2{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 10px;
+        
+    }
+}
+
+
+
+
+
+
+
+@media (max-width:1023px) {
+    .BasePlanAndMostPopularFlexDiv{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+   
+    
+}
+
+
+
+.toggle {
+    position: relative;
+    /* display: inline-block; */
+    width: 60px;
+    height: 34px;
+    background-color: #706767;
+    border-radius: 17px;
+    margin-bottom: -20px;
+    cursor: pointer;
+  }
+  .toggle2{
+    position: relative;
+    /* display: inline-block; */
+    width: 60px;
+    height: 34px;
+    /* background-color: #706767; */
+    border-radius: 17px;
+    margin-bottom: -20px;
+    cursor: pointer;
+    background-color: #1ce783;
+  }
+  .inner-circle {
+    position: absolute;
+    top: 2px;
+  
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.2s;
+  }
+  .inner-circle2{
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: transform 0.2s;
+  }
+.SelectPlanWrap{
+    border: 1px solid black;
+}
+/* new css */
+.testWrap{
+    display: flex ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    padding: 10px 20px ;
+    justify-content: space-between;
+}
+.sub{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px ;
+
+}
+
+/* plan */
+
+.planTextWrap{
+    color: white;
+    display: flex;
+    flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   padding-left: 14px;
+
+   padding-right: 14px;
+
+}
+.planTextWrap p{
+    /* line-height: 200px; */
+    font-weight: 600;
+}
+.planTextGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.planTextGrid2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 2px;
+}
