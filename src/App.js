@@ -19,14 +19,11 @@ function App() {
           <Route path="/Account" element={<Account />} />
           <Route path="/SubScriptions" element={<SubScriptions />} />
 
-          {/* <Route path="/About" element={<About />} /> */}
         </Routes>
       </BrowserRouter>
 
 
-      <a className="" href="">
-        REFRESH
-      </a>
+      
     </section>
   );
 }
