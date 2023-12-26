@@ -1,6 +1,9 @@
 
 .SelectPlanWrap {
     background-color: #000000;
+    border: 1px solid black;
+    color:white;
+    padding:20px 40px ;
 }
 .SelectPlanWrap h1{
     color: #fff;
@@ -11,119 +14,9 @@
     line-height: 15px;
 }
 
-.SelectPlanWrap h6{
-    color:#1ce783;
-
-}
-.SelectPlanWrap h5{
-    color: #fff;
-}
-.bestPlansWrap{
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-.mostPoPuLarWrap{
-    line-height: 10px;
-    padding-bottom: 30px;
-}
- .mostPoPuLarWrap1 button:nth-child(1){
-    color:#1d181d;
-    background-color: #1ce783;
-    font-size: 8px;
-    padding: 10px 35px ;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: n-resize;
-    border: none;
-}
-.mostPoPuLarWrap1 h3{
-    color: rgb(102, 105, 103);
-    font-size: 12px;
-    font-family: sans-serif ;
-   
-}
-.mostPoPuLarWrap1 h4{
-    color: #fff;
-    margin-bottom: 5px;
-}
-
-
-.mostPoPuLarWrap1{
-    display: flex;
-    gap: 20px;
-    align-items: last baseline;
-                 margin-bottom: 14px;
-
-}
-
-
-
-.pricePerMonth{
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: #fff;
-    font-size: 14px;
-    width: 100%;
-    color: #040405;
-    cursor: pointer;
-    border: none;
-    padding: 10px ;
-}
-
-
-
-.mostPoPuLarWrap2 button:nth-child(1){
-   color:#1d181d;
-   background-color: #1ce783;
-   font-size: 8px;
-   padding: 10px 35px ;
-   border-radius: 20px;
-   font-weight: bold;
-   cursor: n-resize;
-   border: none;
-}
-.mostPoPuLarWrap2 h5{
-   color: #fff;
-   font-size: 16px;
-   font-family: sans-serif ;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   font-weight: bold;
-  
-}
-.mostPoPuLarWrap2 h2{
-   color: #fff;
-   margin-bottom: 5px;
-   font-size: 17px;
-   margin-bottom: 0;
-}
-
-.BasePlanAndMostPopularFlexDiv{
-    display: flex;
-    /* align-items: last baseline center; */
-    /* justify-content: center; */
-    gap: 5%;
-    justify-content: space-around;
-}
-
-
-.mostPoPuLarWrap2{
-    /* display: none; */
-    display: flex;
-    transition: 0.3s;
-    margin-top: 14px ;
-    margin-bottom: 14px;
-    gap: 5px;
-    padding: 10px;
-    
-}
-@media(max-width:526px){
-    .mostPoPuLarWrap2{
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        gap: 10px;
-        
+@media (max-width:500px) {
+    .SelectPlanWrap h1{
+        font-size: 1.7rem;
     }
 }
 
@@ -133,26 +26,20 @@
 
 
 
-@media (max-width:1023px) {
-    .BasePlanAndMostPopularFlexDiv{
-        flex-direction: column;
-        align-items: center;
-        
-    }
-   
-    
-}
+
+
+
+
 
 
 
 .toggle {
     position: relative;
-    /* display: inline-block; */
     width: 60px;
     height: 34px;
     background-color: #706767;
     border-radius: 17px;
-    margin-bottom: -20px;
+    /* margin-bottom: -400px; */
     cursor: pointer;
   }
   .toggle2{
@@ -187,27 +74,95 @@
     border-radius: 15px;
     transition: transform 0.2s;
   }
-.SelectPlanWrap{
-    border: 1px solid black;
+
+.huluLogo{
+    width: 190px ;
 }
-/* new css */
-.testWrap{
-    display: flex ;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    padding: 10px 20px ;
-    justify-content: space-between;
+.wrap2 h4{
+    color: #1ce783;
+    margin-top: 0;
 }
-.sub{
+.wrap2 h2{
+    margin-bottom: 5px ;
+    font-size: 1rem;
+}
+.wrap2{
     display: flex;
-    justify-content: space-between;
-    padding: 10px 20px ;
-
+    gap: 10px ;
+    align-items: flex-start;
+    
+}
+.planTextGrid{
+    display: grid; 
+     gap: 5px;
+    font-family: sans-serif;
+}
+.planTextGrid2 div{
+    padding-top: 30px ;
+}
+.planTextGrid2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-/* plan */
 
-.subScribeTex{
-    color: white;
-    display: flex;
-    justify-content: space-around;
+.planTextGrid p{
+     /* padding-top: 5px; */
+     padding-bottom: 5px; 
+    border-bottom: 1px solid grey ;
+    
+}
+.popularWrap h4{
+color: #706767;
+margin-bottom: 5px;
+}
+.popularWrap h3{
+    margin-top: 4px;
+}
+.mostPopular{
+     background-color: #1ce783;
+     border: none;
+     border-radius: 5rem;
+     font-size: 10px;
+     font-weight: bolder;
+     padding: 5px 10px ;
+}
+.popularWrap{
+    text-align: center;
+}
+
+.price{
+    height: 40px;
+    width: 70%;
+    border: none;
+    border-radius: 4px;
+    background-color:white;
+    font-weight: bolder;
+
+}
+.flexPlan{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px 0px ;
+
+    
+}
+.hulu-logo{
+    width: 200px;
+    /* margin-bottom: 0px ; */
+    /* height: 100px; */
+}
+
+@media(max-width:900px){
+    .hide2{
+        display:none;
+    }
+    .flexPlan{
+        grid-template-columns: 1fr;
+    }
+    
 }

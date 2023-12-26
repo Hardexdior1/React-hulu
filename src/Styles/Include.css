@@ -1,6 +1,6 @@
 .includeWrap {
   background-color:black;
-  padding: 36px;
+  padding: 36px ;
   display: grid;
   gap: 20px ;
   z-index: 10;
@@ -66,18 +66,24 @@ table {
 }
 .include {
   text-align: center;
+  /* padding: 20px 0px; */
 }
 .lineHeight {
   line-height: 30px;
-}
+  font-size: 19px;
 
+}
+@media (max-width:500px) {
+  .lineHeight{
+    font-size:14px;
+  }
+}
 .include h1 {
   font-size: 48px;
   margin-top: 10px;
 }
 .include p {
   font-family: "Graphik", sans-serif;
-  font-size: 19px;
   font-weight: bold;
   /* padding: 0px 30px ; */
 }

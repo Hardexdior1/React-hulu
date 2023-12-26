@@ -19,8 +19,23 @@ import m16 from '../images/m16.jfif'
 
 
 
+// Title: "Pulp Fiction"
+// Title: "Up"
+// Title: "Memento"
+// Title: "Jaws"
+// 
+// Title: "Forrest Gump"
+// Title: "The Dark Knight"
+// 
+// Title: "The Terminator"
 const data1=[
     {
+        Title1: "Mad Max",
+
+        Title2: "The Godfather",
+         Title3: "Jurassic Park",
+         Title4: "Blade Runner",
+
         id:1,
         img1:m1,
         img2:m2,

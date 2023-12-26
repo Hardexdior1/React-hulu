@@ -9,11 +9,9 @@ const Carousel1 = () => {
   // console.log(data2);
   const[showLength,setShowLength]=useState(true)
   const[dataLength,setDataLength]=useState(data1)
-
-
   const [count, setCount] = useState(0);
   console.log(count)
-  const { img1, img2, img3, img4 } = data1[count];
+  const { img1, img2, img3, img4,Title1,Title2,Title3,Title4 } = data1[count];
   // Initialize with the first object from data1
   const translateValue = `translateX(-${count * 2}%)`;
 
@@ -48,15 +46,7 @@ const Carousel1 = () => {
   
   };
   const prev = () => {
-    // ima
-
-    // setCount(count===0)
-
-    // else{
-    //     setCount(count==0)
-    // }
-    // pre.current.classList.remove('prev')
-    // pre.current.classList.add('hide')
+  
 
       if(count>0){
         setCount(count - 1);
@@ -68,12 +58,6 @@ const Carousel1 = () => {
         pre.current.classList.add('prev')
         pre.current.classList.remove('next')
       }
-     
-    // if (count===2) {
-    //     console.log('hello')
-    //     
-
-    // }
   
   };
   return (
@@ -83,8 +67,13 @@ const Carousel1 = () => {
    {mobileData.map((eachItem)=>{
       const{img1,img2,img3,img4}=eachItem
       return<div className="mobileImgWrap">
-        <div><img src={img1} alt="img" /></div>
-        <div><img src={img2} alt="img" /></div>
+        <div><img src={img1} alt="img" />
+        <h2 >{Title1}</h2>
+        </div>
+
+        <div><img src={img2} alt="img" />
+        <h2>{Title2}</h2>
+        </div>
         <div><img src={img3} alt="img" /></div>
         <div><img src={img4} alt="img" /></div>
 
