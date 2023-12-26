@@ -4,7 +4,7 @@ import "../Styles/Form.css";
 import logoDark from "../images/hulu-dark.svg";
 
 const Form = () => {
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(false);
   const [success, setSuccess] = useState(false);
   const CheckPassword = (event) => {
     if (event.target.value.length > 10) {
@@ -64,13 +64,17 @@ const Form = () => {
             <div>
               <input
                 id="password"
-                type="password"
+                type={password?"text":"password"}
                 required
                 onChange={CheckPassword}
               />
-              <button class="showPass">show password</button>
+              <button class="showPass" onClick={()=>{
+                setPassword(true)
+              }}>show password</button>
 
-              <button class="hidePass">hide password</button>
+              <button class="hidePass" onClick={()=>{
+              setPassword(false)
+              }}>hide password</button>
             </div>
           </div>
 

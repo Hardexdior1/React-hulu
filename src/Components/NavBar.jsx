@@ -32,6 +32,8 @@ const NavBar = () => {
 setShowForm(false)
   }
 
+  const [password,setPassword]=useState(false)
+
   return (
     <section className="navWrap">
       <div className="heroWrap">
@@ -185,12 +187,21 @@ setShowForm(false)
           </div>
 
           <div>
-            <label for="password">PASSWORD</label>
+            <label htmlFor="password">PASSWORD</label>
             <div>
-              <input id="password" type="password" required/>
-              <button class="showPass">show password</button>
+              <input
+                id="password"
+                type={password?"text":"password"}
+                required
+               
+              />
+              <button class="showPass" onClick={()=>{
+                setPassword(true)
+              }}>show password</button>
 
-              <button class="hidePass">hide password</button>
+              <button class="hidePass" onClick={()=>{
+              setPassword(false)
+              }}>hide password</button>
             </div>
           </div>
 
