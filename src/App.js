@@ -22,7 +22,6 @@ function App() {
         </Routes>
       </BrowserRouter>
 
-<a href="">REFRESH</a>
       
     </section>
   );
