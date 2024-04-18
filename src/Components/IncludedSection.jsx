@@ -109,11 +109,11 @@ const IncludedSection = () => {
                 <div className="tvText">
                   <h3>TV Shows</h3>
 
-                  <p>
+                  {tvShowTvShow?<p>
                     watch past seasons of exclusive shows, current-season
                     episodes the day after they air, 40+ acclaimed series from
                     FX, classic favorites, and tons more.{" "}
-                  </p>
+                  </p>:''}
                 </div>
               </div>
               <div>
