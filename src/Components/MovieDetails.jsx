@@ -1,9 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";import nullImg from "../images/null-img.png";
+import { useParams } from "react-router-dom";
+import nullImg from "../images/null-img.png";
 import { FaPlay } from "react-icons/fa";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [credits, setCredits] = useState(null);
@@ -44,32 +43,14 @@ const MovieDetails = () => {
     setShowTriller(!showTriller);
   };
   if (!movieDetails || !credits || !videos)
-    return <div className="text-white">Loading...</div>;
+    return <div className="text-black h-screen flex items-center justify-center">Loading...</div>;
 
   // getting director , writerand trailer
   const director = credits.crew.find((member) => member.job === "Director");
   const writers = credits.crew.filter((member) => member.job === "Writer");
   const trailer = videos.results.find((video) => video.type === "Trailer");
 
-  // responsiveness for casts carousel
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 768 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 768, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+ 
 
   return (
     <div>

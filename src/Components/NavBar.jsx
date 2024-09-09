@@ -7,10 +7,19 @@ import logo from "../images/hulu-logo.svg";
 import disnep1 from "../images/disnep1.png";
 import disnep2 from "../images/disnep2.png";
 import Form from "./Form";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const showGetWrap = useRef();
   const [showForm, setShowForm] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+  
+  const handleSearch = () => {
+    if (searchQuery) {
+      navigate(`/search?search=${searchQuery}`);
+    }
+  };
   const showWrap = () => {
     if (showGetWrap.current.classList.contains("getWrap")) {
       showGetWrap.current.classList.remove("getWrap");
@@ -43,18 +52,6 @@ setShowForm(false)
               <img className="logo" src={logo} alt="hulu-logo" />
             </div>
           </Link>
-
-          {/* <li>
-          
-            <Link
-              className="active"
-              to="./About"
-              onClick={() => {
-           
-              }}>
-              About
-            </Link>
-          </li> */}
 
           <div>
             <button
@@ -92,7 +89,8 @@ setShowForm(false)
           </div>
         </div>
 
-        <div className="disneyBundleWrap">
+        <div className="disneyBundleWrap px-4 md:px-0">
+       
           <div className="disneySub">
             <h5>DISNEY BUNDLE DUO BASIC </h5>
 
@@ -137,23 +135,23 @@ setShowForm(false)
           </div>
         </div>
 
-        <div className="termsWrap">
-          <div>
-            <Link>
-              <small>Terms apply </small>
-            </Link>
+        <div>
+        <form className="mt-8 px-6 pt-14">
+          <div className="flex bg-white rounded-full shadow-md overflow-hidden">
+            <input
+              type="text"
+              className="flex-grow px-4 py-2 text-black focus:outline-none"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search for a movie..."
+            />
+            <button type="submit"
+              className="px-6 py-3 bg-[#1ce783] text-white font-semibold rounded-full"
+              onClick={handleSearch}>
+              Search
+            </button>
           </div>
-
-          <div>
-            <Link to="/Account">
-              <h4>SIGN UP FOR HULU ONLY </h4>
-            </Link>
-          </div>
-          <div>
-            <Link className="view">
-              <h5>VIEW MORE PLANS </h5>
-            </Link>
-          </div>
+        </form>
         </div>
       </div>
       {showForm ? <form

@@ -11,11 +11,14 @@ import SubScriptions from "./Components/SubScriptions";
 import MovieDetails from "./Components/MovieDetails";
 import SimpleForm from "./Components/SimpleForm"
 import SlugGenerator from "./Components/SlugGenerator";
+import Search from "./Components/Search";
 function App() {
   return (
     <section className="App">
       <BrowserRouter>
         <Routes>
+        <Route path="/search" element={<Search />} />
+
           <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<Form />} />
           <Route path="/account" element={<Account />} />
@@ -23,6 +26,8 @@ function App() {
           <Route path="/sign-up" element={<SimpleForm />} />
 
           <Route path="/movie_Details/:id" element={<MovieDetails />} />
+          <Route path="/search/:id" element={<MovieDetails />} />
+
           <Route path="/slug" element={<SlugGenerator />} />
 
 
