@@ -663,7 +663,7 @@ tvRated()
           </div>
         </div>
 
-        <div>
+        <div className="px-5 md:px-0">
           <div className="include">
             <h4>HULU + LIVE TV, NOW WITH DISNEY+ AND ESPN+, ALL WITH ADS</h4>
             <h1>Live TV Makes It Better</h1>
@@ -681,7 +681,7 @@ tvRated()
           </div>
         </div>
 
-        <div className="getHulu">
+        <div className="getHulu px-5 md:px-0">
           <div>
             <Link>
               <button>GET HULU + LIVE TV </button>

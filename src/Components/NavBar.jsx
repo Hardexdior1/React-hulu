@@ -89,7 +89,7 @@ setShowForm(false)
           </div>
         </div>
 
-        <div className="disneyBundleWrap px-4 md:px-0">
+        <div className="disneyBundleWrap  mx-4 md:mx-0">
        
           <div className="disneySub">
             <h5>DISNEY BUNDLE DUO BASIC </h5>

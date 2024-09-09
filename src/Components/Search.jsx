@@ -7,13 +7,15 @@ import { format } from "date-fns";
 
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false); // State to track loading
+  const [error, setError] = useState(null); // State to track errors
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const place = queryParams.get("search");
-  console.log(place);
 
   useEffect(() => {
     if (place) {
+      setLoading(true); // Set loading to true before fetching data
       axios
         .get(`https://api.themoviedb.org/3/search/movie`, {
           params: {
@@ -23,10 +25,12 @@ const Search = () => {
         })
         .then((response) => {
           setSearchResults(response.data.results);
-          console.log(response.data.results);
+          setLoading(false); // Set loading to false after data is fetched
         })
         .catch((error) => {
           console.error("Error fetching movie data:", error);
+          setError("Error fetching movie data try to refresh");
+          setLoading(false); // Set loading to false in case of error
         });
     }
   }, [place]);
@@ -34,26 +38,27 @@ const Search = () => {
   return (
     <div className="p-4">
       <h2 className="text-xl font-bold mb-4">Search Results for "{place}"</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {searchResults.length > 0 ? (
-          searchResults.map((movie) => {
+      
+      {/* Show loading state */}
+      {loading ? (
+        <p className="text-gray-400">Searching...</p>
+      ) : error ? (
+        <p className="text-red-500">{error}</p>
+      ) : searchResults.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {searchResults.map((movie) => {
             const formattedDate = format(
               new Date(movie.release_date),
               "MMMM d, yyyy"
             );
             return (
-              <Link to={"/search/" + movie.id} key={movie.id} >
+              <Link to={"/search/" + movie.id} key={movie.id}>
                 <div className="bg-gray-800 p-4 rounded-lg border border-#1ce783">
-                  {/* <img
-                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                  alt={movie.title}
-                  className="w-full  object-cover mb-4 rounded"
-                /> */}
                   <img
-                    className="rounded w-full object-cover" // Adjust the width with Tailwind classes
+                    className="rounded w-full object-cover"
                     src={
                       movie.poster_path
-                        ? `https://image.tmdb.org/t/p/original${movie.poster_path}` // Use original size and let Tailwind handle the width
+                        ? `https://image.tmdb.org/t/p/original${movie.poster_path}`
                         : nullImg
                     }
                     alt={movie.title}
@@ -65,11 +70,11 @@ const Search = () => {
                 </div>
               </Link>
             );
-          })
-        ) : (
-          <p className="text-gray-400">No movies found</p>
-        )}
-      </div>
+          })}
+        </div>
+      ) : (
+        <p className="text-gray-400 h-screen flex items-center justify-center">No movies found</p>
+      )}
     </div>
   );
 };
