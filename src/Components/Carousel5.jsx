@@ -49,16 +49,6 @@ const Carousel5 = () => {
   
   };
   const prev = () => {
-    // ima
-
-    // setCount(count===0)
-
-    // else{
-    //     setCount(count==0)
-    // }
-    // pre.current.classList.remove('prev')
-    // pre.current.classList.add('hide')
-
       if(count>0){
         setCount(count - 1);
         nex.current.classList.remove('hide')
@@ -69,13 +59,6 @@ const Carousel5 = () => {
         pre.current.classList.add('prev')
         pre.current.classList.remove('next')
       }
-     
-    // if (count===2) {
-    //     console.log('hello')
-    //     
-
-    // }
-  
   };
   return (
  <div className="overAllMovieWrap">

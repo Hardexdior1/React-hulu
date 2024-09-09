@@ -83,7 +83,7 @@ setShowForm(false)
               <button className="gta"> Get the Hulu app</button>
             </Link>
 
-            <Link to="/Form">
+            <Link to="/signup">
               <button className="log"> LOG IN</button>
             </Link>
             <Link to="/SubScriptions">

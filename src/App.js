@@ -8,16 +8,23 @@ import Footer from "./Components/Footer";
 import Form from "./Components/Form";
 import Account from "./Components/Account";
 import SubScriptions from "./Components/SubScriptions";
-
+import MovieDetails from "./Components/MovieDetails";
+import SimpleForm from "./Components/SimpleForm"
+import SlugGenerator from "./Components/SlugGenerator";
 function App() {
   return (
     <section className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/Form" element={<Form />} />
-          <Route path="/Account" element={<Account />} />
-          <Route path="/SubScriptions" element={<SubScriptions />} />
+          <Route path="/signup" element={<Form />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/sub-scription" element={<SubScriptions />} />
+          <Route path="/sign-up" element={<SimpleForm />} />
+
+          <Route path="/movie_Details/:id" element={<MovieDetails />} />
+          <Route path="/slug" element={<SlugGenerator />} />
+
 
         </Routes>
       </BrowserRouter>

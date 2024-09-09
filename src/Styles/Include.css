@@ -1,6 +1,6 @@
 .includeWrap {
   background-color:black;
-  padding: 36px ;
+  /* padding: 36px ; */
   display: grid;
   gap: 20px ;
   z-index: 10;
@@ -48,14 +48,9 @@
   border-radius: 15px;
   transition: transform 0.2s;
 }
-
 table {
   color: #ffffff;
 }
-
-
-
-
 .include h4 {
   color: #1ce783;
   margin-bottom: 0;
@@ -66,7 +61,6 @@ table {
 }
 .include {
   text-align: center;
-  /* padding: 20px 0px; */
 }
 .lineHeight {
   line-height: 30px;

@@ -62,7 +62,7 @@ const Carousel1 = () => {
   };
   return (
  <div className="overAllMovieWrap">
-    <h4>FEATURED TV</h4>
+    <h4 className="mb-4 mt-4">FEATURED TV</h4>
    <div>
    {mobileData.map((eachItem)=>{
       const{img1,img2,img3,img4}=eachItem

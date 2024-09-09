@@ -55,34 +55,34 @@ const News = () => {
     <div>
       <section className="NewsWrap" ref={background}>
         <div className="overAllNewsWrap">
-        <div className="newsChanger">
+        <div className="newsChanger mt-3 px-3 overflow-x-scroll md:px-0 md:overflow-hidden md:mt-0">
           <h5
-            className="newsChangeColor"
+            className="newsChangeColor shrink-0 font-semibold"
             ref={liveText}
             onClick={() => {
               showLive();
             }}>
             LIVE SPORTS{" "}
           </h5>
-          <h5
+          <h5 className="shrink-0 font-semibold"
             ref={breakingText}
             onClick={() => {
               showBreaking();
             }}>
             BREAKING NEWS{" "}
           </h5>
-          <h5
+          <h5 className="shrink-0 font-semibold"
             ref={biggestText}
             onClick={() => {
               showBiggest();
             }}>
-            BIGGEST EVENTS{" "}
+            BIGGEST EVENTS
           </h5>
         </div>
 
         {live ? (
           <div className="newsText">
-            <h2>Live Sports </h2>
+            <h2 className="text-2xl my-8">Live Sports </h2>
             <p>Catch your games at home or on the go. Stream live games from major college and pro leagues including the NCAA®, NBA, NHL, NFL, and more. Includes top local and national sports networks like ABC, CBS Sports Network, ESPN, FOX, FS1, TNT, NFL Network and more.</p>
           </div>
         ) : (
@@ -90,7 +90,7 @@ const News = () => {
         )}
         {breaking ? (
           <div className="newsText">
-            <h2>Breaking News </h2>
+            <h2 className="text-2xl my-8">Breaking News </h2>
            <p>Keep pace with what's going on locally and globally with trusted opinions from all the top news networks.</p>
           </div>
         ) : (
@@ -98,7 +98,7 @@ const News = () => {
         )}
         {biggest ? (
           <div className="newsText">
-            <h2>Biggest Events </h2>
+            <h2 className="text-2xl my-8">Biggest Events </h2>
       <p>Spectacular, can't-miss moments like the Olympics, Grammys®, Oscars®, Emmys®, and more.</p>
           </div>
         ) : (
