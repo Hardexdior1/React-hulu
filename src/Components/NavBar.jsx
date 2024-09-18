@@ -106,7 +106,7 @@ setShowForm(false)
               </div>
 
               <div>
-                <Link to="/SubScriptions">
+                <Link to="/sub-scription">
                   <button>GET THEM BOTH</button>
                 </Link>
               </div>
@@ -127,7 +127,7 @@ setShowForm(false)
               </div>
 
               <div>
-                <Link to="/SubScriptions">
+                <Link to="/sub-scription">
                   <button>GET ALL THREE </button>
                 </Link>
               </div>

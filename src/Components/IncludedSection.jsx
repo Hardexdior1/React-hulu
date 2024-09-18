@@ -553,9 +553,104 @@ tvRated()
                 </div>
               </div>
               <div>
-                <Carousel11 />
-                <Carousel12 />
-                <Carousel13 />
+                {/* <Carousel11 /> */}
+                <h1 className="text-white text-md font-bold mb-3 my-3 mt-4 ml-4"> TOP RATED  </h1>
+
+                <Carousel responsive={responsive}>
+                  {tvTopRated?.map((item) => {
+                    const formattedDate = format(
+                      new Date(item.first_air_date),
+                      "MMMM d, yyyy"
+                    );
+
+                    return (
+                      <div key={item.id} className="mx-2 bg-white border">
+                        <div className="">
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                            alt={item.original_name}
+                          />
+                        </div>
+                        <div className="px-3 py-4">
+                          <Link to={"/movie_Details/" + item.id}>
+                            <h1 className="font-bold text-1xl">
+                              {" "}
+                              {item.original_name}{" "}
+                            </h1>
+                         
+                          <p className="font-bold">
+                            Release Date: {formattedDate}
+                          </p>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Carousel>
+                <h1 className="text-white text-md font-bold mb-3 my-3 ml-4"> AIRING TODAY  </h1>
+                <Carousel responsive={responsive}>
+                  {airingToday?.map((item) => {
+                    const formattedDate = format(
+                      new Date(item.first_air_date),
+                      "MMMM d, yyyy"
+                    );
+
+                    return (
+                      <div key={item.id} className="mx-2 bg-white border">
+                        <div className="">
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                            alt={item.title}
+                          />
+                        </div>
+                        <div className="px-3 py-4">
+                          <Link to={"/movie_Details/" + item.id}>
+                            <h1 className="font-bold text-1xl">
+                              {" "}
+                              {item.original_name}
+                            </h1>
+                         
+                          <p className="font-bold">
+                            Release Date: {formattedDate}
+                          </p>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Carousel>
+                <h1 className="text-white text-md font-bold mb-3 my-3 ml-4"> POPULAR </h1>
+                <Carousel responsive={responsive}>
+                  {nowPlaying?.map((item) => {
+                    const formattedDate = format(
+                      new Date(item.release_date),
+                      "MMMM d, yyyy"
+                    );
+
+                    return (
+                      <div key={item.id} className="mx-2 bg-white border">
+                        <div className="">
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                            alt={item.title}
+                          />
+                        </div>
+                        <div className="px-3 py-4">
+                          <Link to={"/movie_Details/" + item.id}>
+                            <h1 className="font-bold text-1xl">
+                              {" "}
+                              {item.original_title}{" "}
+                            </h1>
+                          
+                          <p className="font-bold">
+                            Release Date: {formattedDate}
+                          </p>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Carousel>
                 {/* <Carousel4 /> */}
               </div>
             </div>
@@ -589,10 +684,105 @@ tvRated()
                 </div>
               </div>
               <div>
-                <Carousel14 />
-                <Carousel12 />
-                <Carousel13 />
-                {/* <Carousel4 /> */}
+              <h1 className="text-white text-md font-bold mb-3 my-3 ml-4"> POPULAR </h1>
+                <Carousel responsive={responsive}>
+                  {popularMovies?.map((item) => {
+                    const formattedDate = format(
+                      new Date(item.release_date),
+                      "MMMM d, yyyy"
+                    );
+
+                    return (
+                      <div key={item.id} className="mx-2 bg-white border">
+                        <div className="">
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                            alt={item.title}
+                          />
+                        </div>
+                        <div className="px-3 py-4">
+                          <Link to={"/movie_Details/" + item.id}>
+                            <h1 className="font-bold text-1xl">
+                              {" "}
+                              {item.original_title}{" "}
+                            </h1>
+                       
+                          <p className="font-bold">
+                            Release Date: {formattedDate}
+                          </p>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Carousel>
+                {/* <Carousel14 /> */}
+                <h1 className="text-white text-md font-bold mb-3 my-3 mt-4 ml-4"> TOP RATED  </h1>
+
+                <Carousel responsive={responsive}>
+                  {tvTopRated?.map((item) => {
+                    const formattedDate = format(
+                      new Date(item.first_air_date),
+                      "MMMM d, yyyy"
+                    );
+
+                    return (
+                      <div key={item.id} className="mx-2 bg-white border">
+                        <div className="">
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+                            alt={item.original_name}
+                          />
+                        </div>
+                        <div className="px-3 py-4">
+                          <Link to={"/movie_Details/" + item.id}>
+                            <h1 className="font-bold text-1xl">
+                              {" "}
+                              {item.original_name}{" "}
+                            </h1>
+                         
+                          <p className="font-bold">
+                            Release Date: {formattedDate}
+                          </p>
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Carousel>
+                <h1 className="text-white text-md font-bold mb-3 my-3 mt-4 ml-4"> TOP RATED  </h1>
+
+<Carousel responsive={responsive}>
+  {tvTopRated?.map((item) => {
+    const formattedDate = format(
+      new Date(item.first_air_date),
+      "MMMM d, yyyy"
+    );
+
+    return (
+      <div key={item.id} className="mx-2 bg-white border">
+        <div className="">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+            alt={item.original_name}
+          />
+        </div>
+        <div className="px-3 py-4">
+          <Link to={"/movie_Details/" + item.id}>
+            <h1 className="font-bold text-1xl">
+              {" "}
+              {item.original_name}{" "}
+            </h1>
+         
+          <p className="font-bold">
+            Release Date: {formattedDate}
+          </p>
+          </Link>
+        </div>
+      </div>
+    );
+  })}
+</Carousel>
               </div>
             </div>
           ) : null}
